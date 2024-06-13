@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb04 text-primary tracking-[4px]">
               Web Developer
             </div>
-            <div className="h1 mb-4">Hello, my name is Ryan Davis</div>
+            <div className="h1 mb-4">Hello, my name is Hoàng Lê</div>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
               Brief description with insights into myself, my vocational
               journey, and what I engage in professionally.
@@ -38,6 +38,11 @@ const Hero = () => {
                 Download CV <Download size={18} />
               </Button>
             </div>
+            {/* socials */}
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
           {/* image */}
           <div className="hidden md:flex relative">image</div>
