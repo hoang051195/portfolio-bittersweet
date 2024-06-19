@@ -12,12 +12,7 @@ import {
   Briefcase,
 } from "lucide-react";
 
-const TITLES = {
-  EXPERIENCE: "experience",
-  EDUCATION: "education",
-  SKILLS: "skills",
-  TOOLS: "tools",
-};
+import { TITLES } from "@/utils/constants";
 
 const infoData = [
   {
