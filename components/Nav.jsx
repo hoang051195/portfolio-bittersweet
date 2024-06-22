@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 
 // next hooks
 import { usePathname } from "next/navigation";
+
 const links = [
   { path: "/", name: "home" },
   { path: "/projects", name: "my projects" },
   { path: "/contact", name: "contact" },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underlineStyles, setOpen }) => {
   const path = usePathname();
 
   return (
@@ -22,6 +23,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             key={index}
             href={link.path}
             className={`capitalize ${linkStyles}`}
+            onClick={() => setOpen(false)}
           >
             {link.path === path && (
               <motion.span
