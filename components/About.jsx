@@ -2,124 +2,18 @@ import DevImg from "./DevImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {
-  User2,
-  MailIcon,
-  HomeIcon,
-  PhoneCall,
-  GraduationCap,
-  Calendar,
-  Briefcase,
-} from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
+
+import { infoData, qualificationData, skillData } from "@/utils/data";
 
 import { TITLES } from "@/utils/constants";
-
-const infoData = [
-  {
-    icon: <User2 size={20} />,
-    text: "Hoàng Lê",
-  },
-  {
-    icon: <PhoneCall size={20} />,
-    text: "(+84) 355 205 917",
-  },
-  {
-    icon: <MailIcon size={20} />,
-    text: "leminhhoangk3@gmail.com",
-  },
-  {
-    icon: <Calendar size={20} />,
-    text: "Born on 05 Nov, 1995",
-  },
-  {
-    icon: <GraduationCap size={20} />,
-    text: "Computer Networks and Communications",
-  },
-  {
-    icon: <HomeIcon size={20} />,
-    text: "Thu Dau Mot, Binh Duong, VN",
-  },
-];
-
-const qualificationData = [
-  {
-    title: TITLES.EDUCATION,
-    data: [
-      {
-        university: "ABC Uni.",
-        qualification: "Bachelor of Science",
-        years: "2006 - 2010",
-      },
-      {
-        university: "XYZ University",
-        qualification: "Master of Arts",
-        years: "2010 - 2013",
-      },
-      {
-        university: "Eastern International University",
-        qualification: "Bachelor of CNC",
-        years: "2013 - 2019",
-      },
-    ],
-  },
-  {
-    title: TITLES.EXPERIENCE,
-    data: [
-      {
-        company: "VNTT",
-        role: "Intern Software Engineer",
-        years: "2018",
-      },
-      {
-        company: "VNTT",
-        role: "Software Engineer",
-        years: "2019 - 2021",
-      },
-      {
-        company: "Hitachi Digital Services",
-        role: "Software Engineer",
-        years: "2021 - Present",
-      },
-    ],
-  },
-];
-
-const skillData = [
-  {
-    title: TITLES.SKILLS,
-    data: [
-      {
-        name: "HTML, CSS",
-      },
-      {
-        name: "Front-end Development",
-      },
-      {
-        name: "Javascript, PHP",
-      },
-      {
-        name: "Back-end Development",
-      },
-    ],
-  },
-  {
-    title: TITLES.TOOLS,
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
-      },
-      {
-        imgPath: "/about/figma.svg",
-      },
-      {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/wordpress.svg",
-      },
-    ],
-  },
-];
+import { calculateYearsOfExperience } from "@/utils/calculator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 const About = () => {
   const getData = (arr, title) => {
@@ -162,7 +56,8 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Unmatched Service Quality for Over 10 Years
+                      Unmatched Service Quality for Over{" "}
+                      {calculateYearsOfExperience()} Years
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
                       I specialize in crafting intuitive websites with
@@ -178,7 +73,21 @@ const About = () => {
                             className="flex items-center gap-x-4 mx-auto xl:mx-0"
                           >
                             <div className="text-primary">{item.icon}</div>
-                            <div>{item.text}</div>
+                            {item.note ? (
+                              <TooltipProvider>
+                                <Tooltip>
+                                  <TooltipTrigger>
+                                    {item.text}
+                                    <sup className="text-primary">(*)</sup>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p>{item.note}</p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
+                            ) : (
+                              <div>{item.text}</div>
+                            )}
                           </div>
                         );
                       })}
@@ -263,7 +172,23 @@ const About = () => {
                                     {university}
                                   </div>
                                   <div className="text-lg leading-none text-muted-foreground mb-4">
-                                    {qualification}
+                                    {item.note ? (
+                                      <TooltipProvider>
+                                        <Tooltip>
+                                          <TooltipTrigger>
+                                            {qualification}
+                                            <sup className="text-primary">
+                                              (*)
+                                            </sup>
+                                          </TooltipTrigger>
+                                          <TooltipContent>
+                                            <p>{item.note}</p>
+                                          </TooltipContent>
+                                        </Tooltip>
+                                      </TooltipProvider>
+                                    ) : (
+                                      { qualification }
+                                    )}
                                   </div>
                                   <div className="text-base font-medium">
                                     {years}
@@ -292,7 +217,7 @@ const About = () => {
                             const { name } = item;
                             return (
                               <div
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                                className="w-4/4 text-center xl:text-left mx-auto xl:mx-0 mb-1"
                                 key={index}
                               >
                                 <div className="font-medium">{name}</div>

@@ -11,13 +11,13 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Hoàng Lê Portfolio",
-  description: "Welcome to my world! I try my best.",
+  description: "Hoàng Lê Portfolio",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={outfit.className}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={outfit.className} suppressHydrationWarning={true}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
           {children}

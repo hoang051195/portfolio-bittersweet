@@ -20,101 +20,17 @@ export const PROJECT_CATEGORY = {
   FULLSTACK: "fullstack",
 };
 
-export const projectData = [
-  {
-    image: "/work/3.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Solstice Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Lumina Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Evolve Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Ignite Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Envision Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Serenity Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Nova Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Zenith Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-];
-
 export const socialIcons = [
   {
     path: "/",
     name: <RiYoutubeFill />,
   },
   {
-    path: "/",
+    path: "https://www.linkedin.com/in/hoangeiu/",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/hoangeiu",
     name: <RiGithubFill />,
   },
   {

@@ -15,7 +15,7 @@ import { Pagination } from "swiper/modules";
 // components
 import ProjectCard from "./ProjectCard";
 
-import { projectData } from "@/utils/constants";
+import { projectData } from "@/utils/data";
 
 const Work = () => {
   return (

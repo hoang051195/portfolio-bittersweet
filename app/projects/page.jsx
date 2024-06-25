@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/ProjectCard";
 
-import { PROJECT_CATEGORY, projectData } from "@/utils/constants";
+import { PROJECT_CATEGORY } from "@/utils/constants";
+import { projectData } from "@/utils/data";
 
 // remove category duplicates
 const uniqueCategories = Object.values(PROJECT_CATEGORY);
