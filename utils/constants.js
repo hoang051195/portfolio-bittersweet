@@ -18,6 +18,7 @@ export const PROJECT_CATEGORY = {
   REACT_JS: "react js",
   NEXT_JS: "next js",
   FULLSTACK: "fullstack",
+  WORKING_PROJECT: "working project",
 };
 
 export const socialIcons = [
@@ -42,3 +43,28 @@ export const socialIcons = [
     name: <RiInstagramFill />,
   },
 ];
+
+export const TECHNOLOGY = {
+  REACT_JS: "ReactJS",
+  NODE_JS: "NodeJS",
+  MONGO_DB: "MongoDB",
+  ANGULAR: "Angular",
+  REDUX_THUNK: "Reduc-Thunk",
+  BOOTSTRAP: "Bootstrap",
+  LEAFLET: "Leaflet",
+  JEST: "Jest",
+  ENZYME: "Enzyme",
+  TYPESCRIPT: "Typescript",
+  SCSS: "scss",
+  PYTHON: "Python",
+  POSTGRESQL: "PostgreSQL",
+  MATERIAL_UI: "Material UI",
+  NET_CORE: ".NET Core",
+  WEBPACK: "Webpack",
+  NODE_RED: "NodeRed",
+};
+
+export const COMPANY = {
+  VNTT: "VNTT",
+  HITACHI: "Hitachi Digital Services Vietnam",
+};
