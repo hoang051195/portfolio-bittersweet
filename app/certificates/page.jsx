@@ -3,9 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
 import CertificateCard from "@/components/CertificateCard";
-import { compareDates } from "@/utils/calculator";
 import { CERTIFICATE_CATEGORY } from "@/utils/constants";
 import { certificateData } from "@/utils/data";
+import { compareDates } from "@/utils/calculator";
 
 // remove category duplicates
 const uniqueCategories = Object.values(CERTIFICATE_CATEGORY);
