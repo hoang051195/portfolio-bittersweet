@@ -15,10 +15,18 @@ export const TITLES = {
 
 export const PROJECT_CATEGORY = {
   ALL_PROJECTS: "all projects",
+  WORKING_PROJECT: "working project",
   REACT_JS: "react js",
   NEXT_JS: "next js",
   FULLSTACK: "fullstack",
-  WORKING_PROJECT: "working project",
+};
+
+export const CERTIFICATE_CATEGORY = {
+  ALL_CERTIFICATES: "All",
+  FULLSTACK: "fullstack",
+  FRONT_END: "front end",
+  BACK_END: "back end",
+  CLOUD: "cloud",
 };
 
 export const socialIcons = [
@@ -62,6 +70,10 @@ export const TECHNOLOGY = {
   NET_CORE: ".NET Core",
   WEBPACK: "Webpack",
   NODE_RED: "NodeRed",
+  AWS: "AWS",
+  AZURE: "Azure",
+  SPRING_BOOT: "Spring Boot",
+  JAVA: "Java",
 };
 
 export const COMPANY = {

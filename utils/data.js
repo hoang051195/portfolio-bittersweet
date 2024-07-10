@@ -10,7 +10,13 @@ import {
   Gem,
 } from "lucide-react";
 
-import { TITLES, PROJECT_CATEGORY, TECHNOLOGY, COMPANY } from "./constants";
+import {
+  TITLES,
+  PROJECT_CATEGORY,
+  TECHNOLOGY,
+  COMPANY,
+  CERTIFICATE_CATEGORY,
+} from "./constants";
 import { calculateYearsOfExperience } from "./calculator";
 
 export const CV_LINK =
@@ -149,7 +155,80 @@ export const servicesData = [
 
 export const projectData = [
   {
-    image: "/work/3.png",
+    image: "/work/wlms-project-card.png",
+    category: PROJECT_CATEGORY.WORKING_PROJECT,
+    name: "Water Loss",
+    description: "The project deploys a water loss management system software.",
+    detail:
+      "The project deploys a water loss management system software. This project can help manage district metered areas to narrow losses to particular areas and provide near real time leak detection. ",
+    link: "/",
+    github: "/",
+    position: "Team Lead - Front End Developer",
+    responsibility: "",
+    duration: "1 year",
+    teamSize: 12,
+    technology: [
+      TECHNOLOGY.ANGULAR,
+      TECHNOLOGY.SPRING_BOOT,
+      TECHNOLOGY.POSTGRESQL,
+      TECHNOLOGY.BOOTSTRAP,
+      TECHNOLOGY.JAVA,
+      TECHNOLOGY.TYPESCRIPT,
+      TECHNOLOGY.LEAFLET,
+    ],
+    company: COMPANY.HITACHI,
+    startTime: "01/04/2023",
+    endTime: "30/04/2024",
+  },
+  {
+    image: "/work/dssmith-project-card.png",
+    category: PROJECT_CATEGORY.WORKING_PROJECT,
+    name: "DS Smith",
+    description:
+      "A web application that visualizes chemical data is manufactured.",
+    detail:
+      "A web application which visualizes material data, in request research of 2017 to 2023, is manufactured. Visualize data depending on how to show plurality, such as a scatter diagram and SOM (self-organization map).",
+    link: "/",
+    github: "/",
+    position: "Front End Developer",
+    responsibility: "",
+    duration: "9 months (3 phases)",
+    teamSize: 5,
+    technology: [
+      TECHNOLOGY.REACT_JS,
+      TECHNOLOGY.REDUX_THUNK,
+      TECHNOLOGY.AWS,
+      TECHNOLOGY.MATERIAL_UI,
+    ],
+    company: COMPANY.HITACHI,
+    startTime: "01/12/2022",
+    endTime: "31/03/2023",
+  },
+  {
+    image: "/work/mdv-project-card.png",
+    category: PROJECT_CATEGORY.WORKING_PROJECT,
+    name: "MDV",
+    description:
+      "A web application that visualizes chemical data is manufactured.",
+    detail:
+      "A web application which visualizes material data, in request research of 2017 to 2023, is manufactured. Visualize data depending on how to show plurality, such as a scatter diagram and SOM (self-organization map).",
+    link: "/",
+    github: "/",
+    position: "Front End Developer",
+    responsibility: "",
+    duration: "9 months (3 phases)",
+    teamSize: 5,
+    technology: [
+      TECHNOLOGY.REACT_JS,
+      TECHNOLOGY.REDUX_THUNK,
+      TECHNOLOGY.PYTHON,
+    ],
+    company: COMPANY.HITACHI,
+    startTime: "01/01/2024",
+    endTime: "31/03/2024",
+  },
+  {
+    image: "/work/kepco-project-card.png",
     category: PROJECT_CATEGORY.WORKING_PROJECT,
     name: "KEPCO",
     description:
@@ -178,7 +257,7 @@ export const projectData = [
     endTime: "31/09/2022",
   },
   {
-    image: "/work/3.png",
+    image: "/work/gets-project-2.png",
     category: PROJECT_CATEGORY.WORKING_PROJECT,
     name: "GETS",
     description:
@@ -205,7 +284,7 @@ export const projectData = [
     endTime: "01/04/2022",
   },
   {
-    image: "/work/3.png",
+    image: "/work/im-network.png",
     category: PROJECT_CATEGORY.WORKING_PROJECT,
     name: "IM",
     description:
@@ -230,85 +309,110 @@ export const projectData = [
     startTime: "01/10/2020",
     endTime: "31/01/2021",
   },
+  // {
+  //   image: "/work/3.png",
+  //   category: PROJECT_CATEGORY.REACT_JS,
+  //   name: "Nexa Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/2.png",
+  //   category: PROJECT_CATEGORY.FULLSTACK,
+  //   name: "Solstice Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/1.png",
+  //   category: PROJECT_CATEGORY.NEXT_JS,
+  //   name: "Lumina Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/4.png",
+  //   category: PROJECT_CATEGORY.NEXT_JS,
+  //   name: "Evolve Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/4.png",
+  //   category: PROJECT_CATEGORY.FULLSTACK,
+  //   name: "Ignite Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/1.png",
+  //   category: PROJECT_CATEGORY.FULLSTACK,
+  //   name: "Envision Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/2.png",
+  //   category: PROJECT_CATEGORY.REACT_JS,
+  //   name: "Serenity Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/4.png",
+  //   category: PROJECT_CATEGORY.NEXT_JS,
+  //   name: "Nova Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/3.png",
+  //   category: PROJECT_CATEGORY.REACT_JS,
+  //   name: "Zenith Website",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
+  //   link: "/",
+  //   github: "/",
+  // },
+];
+
+export const certificateData = [
   {
-    image: "/work/3.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
+    image: "/certificate/material-ui-card.jpg",
+    category: CERTIFICATE_CATEGORY.FRONT_END,
+    name: "Implement High Fidelity Designs with Material-UI and ReactJS",
+    description: "Integrate Material-UI with ReactJS to build websites.",
+    detail: "",
+    link: "https://www.udemy.com/certificate/UC-7eeb1393-ff59-4afe-b8d0-9af447fcf438/",
+    technology: [TECHNOLOGY.MATERIAL_UI, TECHNOLOGY.REACT_JS],
+    provider: "Udemy",
+    archiveTime: "16/12/2022",
   },
   {
-    image: "/work/2.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Solstice Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Lumina Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Evolve Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Ignite Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: PROJECT_CATEGORY.FULLSTACK,
-    name: "Envision Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Serenity Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: PROJECT_CATEGORY.NEXT_JS,
-    name: "Nova Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: PROJECT_CATEGORY.REACT_JS,
-    name: "Zenith Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quae.",
-    link: "/",
-    github: "/",
+    image: "/certificate/advanced-scss-card.jpg",
+    category: CERTIFICATE_CATEGORY.FRONT_END,
+    name: "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+    description: "Advanced CSS and Sass",
+    detail: "",
+    link: "https://www.udemy.com/certificate/UC-82255b24-882c-464d-af14-5ba5c8604f6c/",
+    technology: [TECHNOLOGY.SCSS],
+    provider: "Udemy",
+    archiveTime: "22/03/2022",
   },
 ];

@@ -1,29 +1,34 @@
 "use client";
-import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
+import { useState } from "react";
 
-import { PROJECT_CATEGORY } from "@/utils/constants";
-import { projectData } from "@/utils/data";
+import CertificateCard from "@/components/CertificateCard";
+import { compareDates } from "@/utils/calculator";
+import { CERTIFICATE_CATEGORY } from "@/utils/constants";
+import { certificateData } from "@/utils/data";
 
 // remove category duplicates
-const uniqueCategories = Object.values(PROJECT_CATEGORY);
+const uniqueCategories = Object.values(CERTIFICATE_CATEGORY);
 
-const Projects = () => {
+const Certificates = () => {
   const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState(PROJECT_CATEGORY.ALL_PROJECTS);
+  const [category, setCategory] = useState(
+    CERTIFICATE_CATEGORY.ALL_CERTIFICATES
+  );
 
-  const filteredProjects = projectData.filter((project) => {
-    return category === PROJECT_CATEGORY.ALL_PROJECTS
-      ? project
-      : project.category === category;
-  });
+  const filteredCerts = certificateData
+    .sort((a, b) => compareDates(a, b))
+    .filter((cert) => {
+      return category === CERTIFICATE_CATEGORY.ALL_CERTIFICATES
+        ? cert
+        : cert.category === category;
+    });
 
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          My Projects
+          My Certificates
         </h2>
         {/* Tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
@@ -43,10 +48,10 @@ const Projects = () => {
           </TabsList>
           {/* tabs content */}
           <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {filteredProjects.map((project, index) => {
+            {filteredCerts.map((certificate, index) => {
               return (
                 <TabsContent value={category} key={index}>
-                  <ProjectCard project={project} />
+                  <CertificateCard certificate={certificate} />
                 </TabsContent>
               );
             })}
@@ -56,4 +61,4 @@ const Projects = () => {
     </section>
   );
 };
-export default Projects;
+export default Certificates;
