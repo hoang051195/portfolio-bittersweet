@@ -17,7 +17,7 @@ export const calculateNumberOfCerts = () => {
 export const compareDates = (d1, d2) => {
   const momentA = moment(d1, "DD/MM/YYYY");
   const momentB = moment(d2, "DD/MM/YYYY");
-  if (momentA > momentB) return 1;
-  else if (momentA < momentB) return -1;
+  if (momentA > momentB) return -1;
+  else if (momentA < momentB) return 1;
   else return 0;
 };

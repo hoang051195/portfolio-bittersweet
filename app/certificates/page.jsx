@@ -16,8 +16,8 @@ const Certificates = () => {
     CERTIFICATE_CATEGORY.ALL_CERTIFICATES
   );
 
-  const filteredCerts = certificateData
-    .sort((a, b) => compareDates(a, b))
+  const filteredCerts = [...certificateData]
+    .sort((a, b) => compareDates(a.archiveTime, b.archiveTime))
     .filter((cert) => {
       return category === CERTIFICATE_CATEGORY.ALL_CERTIFICATES
         ? cert

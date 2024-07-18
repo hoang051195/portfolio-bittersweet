@@ -57,7 +57,7 @@ export const TECHNOLOGY = {
   NODE_JS: "NodeJS",
   MONGO_DB: "MongoDB",
   ANGULAR: "Angular",
-  REDUX_THUNK: "Reduc-Thunk",
+  REDUX_THUNK: "Redux-Thunk",
   BOOTSTRAP: "Bootstrap",
   LEAFLET: "Leaflet",
   JEST: "Jest",
@@ -74,6 +74,12 @@ export const TECHNOLOGY = {
   AZURE: "Azure",
   SPRING_BOOT: "Spring Boot",
   JAVA: "Java",
+  REACT_HOOKS: "React-hooks",
+  GRAPHQL: "GraphQL",
+  WPF: "WPF",
+  WCF: "WCF",
+  MYSQL: "MYSQL",
+  SQL: "SQL",
 };
 
 export const COMPANY = {
